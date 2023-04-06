@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+
+    <link rel="stylesheet" href="./tab.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li class="section active" data-tab="#section1">Section 1</li>
+            <li class="section" data-tab="#section2">Section 2</li>
+            <li class="section" data-tab="#section3">Section 3</li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Section 1 heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas maxime accusamus quia dicta magnam sed
+            rerum libero officiis quis.</p>
+    </section>
+    <section id="section2">
+        <h2>Section 2 heading</h2>
+    </section>
+    <section id="section3">
+        <h2>Section 3 heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas maxime accusamus quia dicta magnam sed
+            rerum libero officiis quis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente earum dicta repudiandae, iusto perferendis dolore tempore minima veniam facere nesciunt excepturi ipsam, officiis inventore quasi nulla dolorem vero facilis adipisci necessitatibus voluptate doloremque. Saepe repellendus, veniam facere sequi consequatur voluptatum reprehenderit? Inventore nihil quisquam totam molestiae vitae! At recusandae ex porro voluptatibus tenetur ipsa eius tempora veritatis incidunt quod dolor asperiores quae, quasi, nostrum quas libero. Repellat enim sapiente est!</p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".section").click(function () {
+                $("li").removeClass("active");
+                $(this).addClass("active");
+                var id = $(this).attr("data-tab");
+                $("section").hide();
+                $(id).show();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
